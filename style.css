@@ -1,0 +1,64 @@
+body {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 12px 32px;
+    border-radius: 10px;
+}
+
+[data-title="r0c6"] {
+    background-color: black !important;
+    color: white !important;
+    pointer-events: all !important;
+    position: relative;
+}
+
+[data-title="r0c6"]::after {
+    content: "First Saturday";
+    position: absolute;
+    top: -30px;
+    background-color: #000;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 2px 5px;
+    border-radius: 20px;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+
+[data-title="r0c6"]:hover::after {
+    opacity: 1;
+}
+
+[data-title="r2c6"]:hover::after {
+    opacity: 1;
+}
+
+[data-title="r2c6"] {
+    background-color: #ff0202 !important;
+    color: white !important;
+    pointer-events: all !important;
+    position: relative;
+}
+
+[data-title="r2c6"]::after {
+    content: "Third Saturday";
+    position: absolute;
+    bottom: -30px;
+    background-color: #ff0000;
+    color: #fff;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 2px 5px;
+    border-radius: 20px;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+.weekend {
+    pointer-events: none;
+    color: #999
+}
